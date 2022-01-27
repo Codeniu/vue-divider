@@ -2,7 +2,7 @@
 
 > vue-divider is a dependency-free, lightweight vue component. This is a study project, You will learn how to build a npm package from this project. You can also learn some webpack configurations.
 
-## [Try the demo](todo.com)
+## [Try the demo](https://codeniu.github.io/vue-divider/)
 
 How to use?
 
