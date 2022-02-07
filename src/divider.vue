@@ -1,18 +1,13 @@
 <template>
   <div class="n-divider">
-    <span class="n-divider-inner-text">{{ title }}</span>
+    <div v-if="$slots.default" :class="['n-divider-inner-text']">
+      <slot />
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  props: {
-    title: {
-      type: String,
-      default: ' ',
-    },
-  },
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>
