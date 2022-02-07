@@ -1,6 +1,6 @@
 {
     "name": "@codeniu/vue-divider",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "This is divider vue component.",
     "main": "dist/vue-divider.min.js",
     "author": "codeniu",
