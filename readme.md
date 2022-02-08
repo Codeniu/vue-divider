@@ -14,7 +14,10 @@ Example
 
 ``` vue
 <template>
-  <niu-divider :title="title" />
+  <div>
+    <niu-divider />
+    <niu-divider>This is a divider</niu-divider>
+  </div>
 </template>
 
 <script>
@@ -22,18 +25,10 @@ Example
   export default {
     components: { niuDivider },
     data () {
-      return {
-        title:'divider'
-      }
+      return { }
     }
   }
 </script>
 ```
 
-Options 
-
-|    Property    |    Description   |   type   |	default	|
-| -----------------  | ---------------- | :--------: | :----------: |
-| title       | txt you can set |String| '' |
-
-[查看发布教程]('../docs/How-to-publish-your-first-npm-package.md')
+[查看npm包的发布教程](https://github.com/Codeniu/vue-divider/blob/main/docs/How-to-publish-your-first-npm-package.md)
