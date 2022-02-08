@@ -1,55 +1,72 @@
 <template>
-  <div class="n-divider">
-    <div v-if="$slots.default" :class="['n-divider-inner-text']">
+  <div :class="['n-divider', `${hiddenPreset ? '' : 'text-preset'}`]">
+    <div
+      v-if="$slots.default"
+      :class="['n-divider-inner-text', `is-${contentPosition}`]"
+    >
       <slot />
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    contentPosition: {
+      type: String,
+      default: 'left',
+      validator(val) {
+        return ['left', 'center', 'right'].indexOf(val) !== -1
+      },
+    },
+
+    hiddenPreset: {
+      type: Boolean,
+      default: false,
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
 .n-divider {
-  width: 100%;
-  min-width: 100%;
-
-  line-height: 1;
+  display: block;
   height: 1px;
-  display: table;
-  margin: 16px 0;
-  color: rgba(0, 0, 0, 0.85);
-  font-weight: 500;
-  font-size: 16px;
-  white-space: nowrap;
-  text-align: center;
-  background: transparent;
-
-  &::before {
-    position: relative;
-    top: 50%;
-    display: table-cell;
-    width: 0;
-    border-top: 1px solid #e8e8e8;
-    transform: translateY(50%);
-    content: '';
-  }
-
-  &::after {
-    position: relative;
-    top: 50%;
-    display: table-cell;
-    width: 100%;
-    border-top: 1px solid #e8e8e8;
-    transform: translateY(50%);
-    content: '';
-  }
+  width: 100%;
+  margin: 24px 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  position: relative;
 
   &-inner-text {
+    position: absolute;
     display: inline-block;
-    padding: 0 10px;
-    border-left: 5px solid #1890ff;
+    padding: 0 20px;
+    background-color: #fff;
+  }
+}
+
+.is-left {
+  transform: translateY(-50%);
+}
+
+.is-right {
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.is-center {
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.text-preset {
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 1em;
+    transform: translateY(-50%);
+    background-color: #1890ff;
   }
 }
 </style>

@@ -31,4 +31,15 @@ Example
 </script>
 ```
 
+
+
+## Options 
+
+| Property          | Description  | type    | default |
+| ----------------- | ------------ | ------- | ------- |
+| contentp-position | 文字位置     | String  | left    |
+| hidden-preset     | 隐藏头部标记 | Boolean | false   |
+
+
+
 [查看npm包的发布教程](https://github.com/Codeniu/vue-divider/blob/main/docs/How-to-publish-your-first-npm-package.md)
