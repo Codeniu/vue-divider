@@ -43,3 +43,6 @@ Example
 
 
 [查看npm包的发布教程](https://github.com/Codeniu/vue-divider/blob/main/docs/How-to-publish-your-first-npm-package.md)
+
+
+[掘金教程](https://juejin.cn/post/7130989356700925983)
